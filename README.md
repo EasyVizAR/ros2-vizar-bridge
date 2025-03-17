@@ -14,16 +14,22 @@ Required Python packages:
 - rclpy (from ROS package)
 - requests
 
+```bash
+sudo apt-get install -y python3-numpy python3-pil python3-requests ros-jazzy-rclpy
+```
+
 ## Running the Node
 
 We are using several environment variables to configure the node.
-The default values are in parentheses.
+The default values are shown below.
 
-- ROS_MAP_TOPIC ("/map"): subscribes to this topic for map updates
-- ROS_POSE_TOPIC ("/pose"): subscribes to this topic for pose updates, assumed to be in map frame
-- VIZAR_SERVER ("http://localhost:5000"): VizAR server URL, may be different during testing and deployment
-- VIZAR_LOCATION ("ROS Testing"): Location name or UUID
-- VIZAR_DEVICE ("ROS Tester"): Device/headset name or UUID
+```bash
+ROS_MAP_TOPIC=/map
+ROS_MAP_TOPIC=/pose
+VIZAR_SERVER=http://localhost:5000
+VIZAR_LOCATION="ROS Testing"
+VIZAR_DEVICE="ROS Tester"
+```
 
 The default map and pose topics will work for a single robot that publishes
 occupancy grids and pose data. For multiple robots, one can run multiple bridge
@@ -43,3 +49,7 @@ the same map, they should use the same location name or ID.
 The VIZAR_DEVICE variable can be set to a UUID or device name. In some places
 this may be referred to as a headset ID. The node will ensure that the device
 exists on the server. A different name or ID should be used for each robot.
+
+```bash
+python3 -m ros2_vizar_bridge
+```
