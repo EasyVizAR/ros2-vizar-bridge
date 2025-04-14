@@ -20,7 +20,7 @@ from .vizar_client import VizarClient
 
 
 ROS_MAP_TOPIC = os.environ.get("ROS_MAP_TOPIC", "/map")
-ROS_POSE_TOPIC = os.environ.get("ROS_MAP_TOPIC", "/pose")
+ROS_POSE_TOPIC = os.environ.get("ROS_POSE_TOPIC", "/pose")
 
 VIZAR_SERVER = os.environ.get("VIZAR_SERVER", "http://localhost:5000")
 VIZAR_LOCATION = os.environ.get("VIZAR_LOCATION", "ROS Testing")
