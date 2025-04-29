@@ -25,7 +25,7 @@ The default values are shown below.
 
 ```bash
 ROS_MAP_TOPIC=/map
-ROS_MAP_TOPIC=/pose
+ROS_POSE_TOPIC=/pose
 VIZAR_SERVER=http://localhost:5000
 VIZAR_LOCATION="ROS Testing"
 VIZAR_DEVICE="ROS Tester"
